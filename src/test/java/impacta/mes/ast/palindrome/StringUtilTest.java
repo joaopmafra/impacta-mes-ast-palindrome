@@ -12,4 +12,10 @@ public class StringUtilTest {
         assertThat(result).isEqualTo("a1c");
     }
 
+    @Test
+    public void removeAccents_stringWithAccents_changesTheCorrectChars() {
+        var result = StringUtil.removeAccents("aêío");
+        assertThat(result).isEqualTo("aeio");
+    }
+
 }
