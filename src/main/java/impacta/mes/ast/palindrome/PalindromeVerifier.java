@@ -2,6 +2,8 @@ package impacta.mes.ast.palindrome;
 
 import java.util.Locale;
 
+import static impacta.mes.ast.palindrome.StringUtil.removePunctuationAndSpaces;
+
 public class PalindromeVerifier {
 
     public boolean isPalindrome(String string) {
@@ -17,12 +19,6 @@ public class PalindromeVerifier {
                 .reverse()
                 .toString()
                 .equalsIgnoreCase(normalizedString);
-    }
-
-    public String removePunctuationAndSpaces(String string) {
-        return string
-                .replaceAll("\\p{Punct}", "")
-                .replaceAll("\\s+", "");
     }
 
 }

@@ -50,10 +50,4 @@ public class PalindromeTest {
         assertThat(result).isTrue();
     }
 
-    @Test
-    public void removePunctuationAndSpaces_stringWithPunctuationSpacesNumbersAndLetters_removesOnlyTheCorrectChars() {
-        var result = verifier.removePunctuationAndSpaces("a/1. c");
-        assertThat(result).isEqualTo("a1c");
-    }
-
 }
