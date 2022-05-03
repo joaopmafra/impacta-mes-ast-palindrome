@@ -39,8 +39,8 @@ public class PalindromeTest {
     }
 
     @Test
-    public void isPalindrome_equalCharsStringWithDifferentCase_isTrue() {
-        var result = verifier.isPalindrome("aA");
+    public void isPalindrome_capitalizedEqualCharsString_isTrue() {
+        var result = verifier.isPalindrome("Aa");
         assertThat(result).isTrue();
     }
 
