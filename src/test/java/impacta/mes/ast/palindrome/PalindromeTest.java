@@ -62,4 +62,27 @@ public class PalindromeTest {
         assertThat(result).isFalse();
     }
 
+    @Test
+    public void isPalindrome_selectedStrings_isTrue() {
+        String[] strings = new String[] {
+                "Rotator",
+                "bob",
+                "madam",
+                "mAlAyAlam",
+                "1",
+                "Able was I, ere I saw Elba",
+                "Madam I’m Adam",
+                "Step on no pets.",
+                "Top spot!",
+                "02/02/2020",
+        };
+
+        for (String string : strings) {
+            var result = verifier.isPalindrome(string);
+            assertThat(result)
+                    .as("isPalindrome(\"%s\")", string)
+                    .isTrue();
+        }
+    }
+
 }

@@ -26,6 +26,11 @@ public class StringEditor {
         return this;
     }
 
+    public StringEditor removeNonAlphaNumericChars() {
+        string = string.replaceAll("[^A-Za-z0-9]", "");
+        return this;
+    }
+
     public String getResult() {
         return string;
     }

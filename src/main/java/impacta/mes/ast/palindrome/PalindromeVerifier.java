@@ -14,6 +14,7 @@ public class PalindromeVerifier {
                 .removePunctuation()
                 .removeSpaces()
                 .removeAccents()
+                .removeNonAlphaNumericChars()
                 .getResult();
 
         return new StringBuilder(normalizedString)
