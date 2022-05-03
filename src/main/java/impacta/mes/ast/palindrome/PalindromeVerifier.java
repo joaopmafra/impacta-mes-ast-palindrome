@@ -18,4 +18,10 @@ public class PalindromeVerifier {
                 .equalsIgnoreCase(string);
     }
 
+    public String removePunctuationAndSpaces(String string) {
+        return string
+                .replaceAll("\\p{Punct}", "")
+                .replaceAll("\\s+", "");
+    }
+
 }
