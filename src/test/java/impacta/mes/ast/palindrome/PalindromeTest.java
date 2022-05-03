@@ -12,6 +12,12 @@ import org.junit.jupiter.api.Test;
 public class PalindromeTest {
 
     @Test
+    public void isPalindrome_nullString_isFalse() {
+        boolean result = new PalindromeVerifier().isPalindrome(null);
+        Assertions.assertThat(result).isTrue();
+    }
+
+    @Test
     public void isPalindrome_emptyString_isTrue() {
         boolean result = new PalindromeVerifier().isPalindrome("");
         Assertions.assertThat(result).isTrue();
