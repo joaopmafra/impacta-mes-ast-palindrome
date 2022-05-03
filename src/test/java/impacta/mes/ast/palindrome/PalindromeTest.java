@@ -23,4 +23,10 @@ public class PalindromeTest {
         Assertions.assertThat(result).isTrue();
     }
 
+    @Test
+    public void isPalindrome_oneCharString_isTrue() {
+        boolean result = new PalindromeVerifier().isPalindrome("1");
+        Assertions.assertThat(result).isTrue();
+    }
+
 }
