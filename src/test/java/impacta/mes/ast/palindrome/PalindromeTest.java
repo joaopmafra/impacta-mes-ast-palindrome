@@ -14,7 +14,7 @@ public class PalindromeTest {
     @Test
     public void isPalindrome_nullString_isFalse() {
         boolean result = new PalindromeVerifier().isPalindrome(null);
-        Assertions.assertThat(result).isTrue();
+        Assertions.assertThat(result).isFalse();
     }
 
     @Test
