@@ -12,10 +12,11 @@ public class PalindromeVerifier {
     }
 
     private boolean verify(String string) {
-        return new StringBuilder(string)
+        String normalizedString  = removePunctuationAndSpaces(string);
+        return new StringBuilder(normalizedString)
                 .reverse()
                 .toString()
-                .equalsIgnoreCase(string);
+                .equalsIgnoreCase(normalizedString);
     }
 
     public String removePunctuationAndSpaces(String string) {
