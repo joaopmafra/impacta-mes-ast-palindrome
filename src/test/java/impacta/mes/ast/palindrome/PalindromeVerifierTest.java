@@ -64,7 +64,7 @@ public class PalindromeVerifierTest {
 
     @Test
     public void isPalindrome_selectedPalindromeStrings_isTrue() {
-        String[] strings = new String[] {
+        var strings = new String[] {
                 "Rotator",
                 "bob",
                 "madam",
@@ -87,7 +87,7 @@ public class PalindromeVerifierTest {
 
     @Test
     public void isPalindrome_selectedNonPalindromeStrings_isFalse() {
-        String[] strings = new String[] {
+        var strings = new String[] {
                 "xyz",
                 "elephant",
                 "Country",

@@ -10,12 +10,12 @@ public class PalindromeVerifier {
     }
 
     private boolean verify(String string) {
-        String normalized  = new StringEditor(string)
+        var normalized  = new StringEditor(string)
                 .removeAccents()
                 .removeNonAlphaNumericChars()
                 .getResult();
 
-        String reversed = new StringBuilder(normalized)
+        var reversed = new StringBuilder(normalized)
                 .reverse()
                 .toString();
 
