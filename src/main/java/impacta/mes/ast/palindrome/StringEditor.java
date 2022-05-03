@@ -10,10 +10,13 @@ public class StringEditor {
         this.string = string;
     }
 
-    public StringEditor removePunctuationAndSpaces() {
-        string = string
-                .replaceAll("\\p{Punct}", "")
-                .replaceAll("\\s+", "");
+    public StringEditor removePunctuation() {
+        string = string.replaceAll("\\p{Punct}", "");
+        return this;
+    }
+
+    public StringEditor removeSpaces() {
+        string = string.replaceAll("\\s+", "");
         return this;
     }
 

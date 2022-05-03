@@ -7,9 +7,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class StringEditorTest {
 
     @Test
-    public void removePunctuationAndSpaces_stringWithPunctuationSpacesNumbersAndLetters_removesOnlyTheCorrectChars() {
-        var result = new StringEditor("a/1. c")
-                .removePunctuationAndSpaces()
+    public void removePunctuation_stringWithPunctuationNumbersAndLetters_removesOnlyTheCorrectChars() {
+        var result = new StringEditor("a/1.c")
+                .removePunctuation()
+                .getResult();
+        assertThat(result).isEqualTo("a1c");
+    }
+
+    @Test
+    public void removeSpaces_stringWithSpacesNumbersAndLetters_removesOnlyTheCorrectChars() {
+        var result = new StringEditor(" a 1 c")
+                .removeSpaces()
                 .getResult();
         assertThat(result).isEqualTo("a1c");
     }

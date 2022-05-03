@@ -11,7 +11,8 @@ public class PalindromeVerifier {
 
     private boolean verify(String string) {
         String normalizedString  = new StringEditor(string)
-                .removePunctuationAndSpaces()
+                .removePunctuation()
+                .removeSpaces()
                 .removeAccents()
                 .getResult();
 
