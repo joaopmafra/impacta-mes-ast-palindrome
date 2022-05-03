@@ -7,3 +7,8 @@ palíndromo.
 
 ## Executar testes
 ``./mvnw test``
+
+## Autores
+João Paulo Mafra - RA 2102473 \
+Cristian Henrique dos Santos - RA 2103130 \
+Tiago André Lopes - RA 2103069
