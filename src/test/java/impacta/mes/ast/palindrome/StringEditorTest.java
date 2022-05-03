@@ -4,17 +4,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class StringUtilTest {
+public class StringEditorTest {
 
     @Test
     public void removePunctuationAndSpaces_stringWithPunctuationSpacesNumbersAndLetters_removesOnlyTheCorrectChars() {
-        var result = StringUtil.removePunctuationAndSpaces("a/1. c");
+        var result = StringEditor.removePunctuationAndSpaces("a/1. c");
         assertThat(result).isEqualTo("a1c");
     }
 
     @Test
     public void removeAccents_stringWithAccents_changesTheCorrectChars() {
-        var result = StringUtil.removeAccents("aêío");
+        var result = StringEditor.removeAccents("aêío");
         assertThat(result).isEqualTo("aeio");
     }
 

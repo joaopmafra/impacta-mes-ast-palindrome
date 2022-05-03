@@ -1,9 +1,7 @@
 package impacta.mes.ast.palindrome;
 
-import java.util.Locale;
-
-import static impacta.mes.ast.palindrome.StringUtil.removeAccents;
-import static impacta.mes.ast.palindrome.StringUtil.removePunctuationAndSpaces;
+import static impacta.mes.ast.palindrome.StringEditor.removeAccents;
+import static impacta.mes.ast.palindrome.StringEditor.removePunctuationAndSpaces;
 
 public class PalindromeVerifier {
 

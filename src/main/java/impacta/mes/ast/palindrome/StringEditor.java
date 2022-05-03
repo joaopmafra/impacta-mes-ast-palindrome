@@ -2,7 +2,7 @@ package impacta.mes.ast.palindrome;
 
 import java.text.Normalizer;
 
-public class StringUtil {
+public class StringEditor {
 
     public static String removePunctuationAndSpaces(String string) {
         return string
