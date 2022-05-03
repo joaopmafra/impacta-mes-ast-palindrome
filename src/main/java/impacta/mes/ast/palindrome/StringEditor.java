@@ -10,24 +10,6 @@ public class StringEditor {
         this.string = string;
     }
 
-    /**
-     * TODO remover; não é mais necessário
-     * @deprecated
-     */
-    public StringEditor removePunctuation() {
-        string = string.replaceAll("\\p{Punct}", "");
-        return this;
-    }
-
-    /**
-     * TODO remover; não é mais necessário
-     * @deprecated
-     */
-    public StringEditor removeSpaces() {
-        string = string.replaceAll("\\s+", "");
-        return this;
-    }
-
     public StringEditor removeAccents() {
         var normalized = Normalizer.normalize(string, Normalizer.Form.NFD);
         string = normalized.replaceAll("\\p{InCombiningDiacriticalMarks}", "");
