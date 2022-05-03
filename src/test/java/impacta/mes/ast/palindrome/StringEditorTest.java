@@ -14,4 +14,12 @@ public class StringEditorTest {
         assertThat(result).isEqualTo("aeio");
     }
 
+    @Test
+    public void removeNonAlphaNumericChars_stringWithNonAlphaNumericChar_removesTheCorrectChars() {
+        var result = new StringEditor(" a’1/")
+                .removeNonAlphaNumericChars()
+                .getResult();
+        assertThat(result).isEqualTo("a1");
+    }
+
 }
