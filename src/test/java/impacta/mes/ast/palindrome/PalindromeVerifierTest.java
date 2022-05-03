@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * The test names follow Roy Osherove's test naming conventions:
  * https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html
  */
-public class PalindromeTest {
+public class PalindromeVerifierTest {
 
     private PalindromeVerifier verifier = new PalindromeVerifier();
 
