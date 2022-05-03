@@ -3,6 +3,8 @@ package impacta.mes.ast.palindrome;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 /**
  * Tests for palindrome verification.
  *
@@ -14,19 +16,19 @@ public class PalindromeTest {
     @Test
     public void isPalindrome_nullString_isFalse() {
         var result = new PalindromeVerifier().isPalindrome(null);
-        Assertions.assertThat(result).isFalse();
+        assertThat(result).isFalse();
     }
 
     @Test
     public void isPalindrome_emptyString_isTrue() {
         var result = new PalindromeVerifier().isPalindrome("");
-        Assertions.assertThat(result).isTrue();
+        assertThat(result).isTrue();
     }
 
     @Test
     public void isPalindrome_oneCharString_isTrue() {
         var result = new PalindromeVerifier().isPalindrome("1");
-        Assertions.assertThat(result).isTrue();
+        assertThat(result).isTrue();
     }
 
 }
