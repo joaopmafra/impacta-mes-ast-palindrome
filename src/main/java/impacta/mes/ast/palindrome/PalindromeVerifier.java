@@ -6,7 +6,7 @@ public class PalindromeVerifier {
         if (string == null) return false;
         else if (string.isEmpty()) return true;
         else if (string.length() == 1) return true;
-        return false;
+        else return new StringBuilder(string).reverse().toString().equals(string);
     }
 
 }
