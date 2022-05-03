@@ -44,4 +44,10 @@ public class PalindromeTest {
         assertThat(result).isTrue();
     }
 
+    @Test
+    public void isPalindrome_equalCharsStringWithPunctuationAndSpaces_isTrue() {
+        var result = verifier.isPalindrome("11/11/11 11:11");
+        assertThat(result).isTrue();
+    }
+
 }
