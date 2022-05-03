@@ -50,4 +50,10 @@ public class PalindromeTest {
         assertThat(result).isTrue();
     }
 
+    @Test
+    public void isPalindrome_allCharsDifferentString_isFalse() {
+        var result = verifier.isPalindrome("abc");
+        assertThat(result).isFalse();
+    }
+
 }
