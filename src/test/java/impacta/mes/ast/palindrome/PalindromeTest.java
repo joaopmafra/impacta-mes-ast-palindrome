@@ -1,6 +1,7 @@
 package impacta.mes.ast.palindrome;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  * Tests for palindrome verification.
@@ -10,6 +11,7 @@ import org.assertj.core.api.Assertions;
  */
 public class PalindromeTest {
 
+    @Test
     public void isPalindrome_emptyString_isTrue() {
         boolean result = new PalindromeVerifier().isPalindrome("");
         Assertions.assertThat(result).isTrue();
