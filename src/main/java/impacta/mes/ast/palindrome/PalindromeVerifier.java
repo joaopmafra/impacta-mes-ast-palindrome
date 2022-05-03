@@ -1,5 +1,7 @@
 package impacta.mes.ast.palindrome;
 
+import java.util.Locale;
+
 public class PalindromeVerifier {
 
     public boolean isPalindrome(String string) {
@@ -10,7 +12,10 @@ public class PalindromeVerifier {
     }
 
     private boolean verify(String string) {
-        return new StringBuilder(string).reverse().toString().equals(string);
+        return new StringBuilder(string)
+                .reverse()
+                .toString()
+                .equalsIgnoreCase(string);
     }
 
 }

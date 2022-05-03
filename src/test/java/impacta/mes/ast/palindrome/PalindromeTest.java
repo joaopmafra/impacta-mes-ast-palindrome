@@ -38,4 +38,10 @@ public class PalindromeTest {
         assertThat(result).isTrue();
     }
 
+    @Test
+    public void isPalindrome_equalCharsStringWithDifferentCase_isTrue() {
+        var result = verifier.isPalindrome("aA");
+        assertThat(result).isTrue();
+    }
+
 }
