@@ -63,7 +63,7 @@ public class PalindromeTest {
     }
 
     @Test
-    public void isPalindrome_selectedStrings_isTrue() {
+    public void isPalindrome_selectedPalindromeStrings_isTrue() {
         String[] strings = new String[] {
                 "Rotator",
                 "bob",
@@ -74,7 +74,7 @@ public class PalindromeTest {
                 "Madam I’m Adam",
                 "Step on no pets.",
                 "Top spot!",
-                "02/02/2020",
+                "02/02/2020"
         };
 
         for (String string : strings) {
@@ -82,6 +82,25 @@ public class PalindromeTest {
             assertThat(result)
                     .as("isPalindrome(\"%s\")", string)
                     .isTrue();
+        }
+    }
+
+    @Test
+    public void isPalindrome_selectedNonPalindromeStrings_isFalse() {
+        String[] strings = new String[] {
+                "xyz",
+                "elephant",
+                "Country",
+                "Top . post!",
+                "Wonderful-fool",
+                "Wild imagination!"
+        };
+
+        for (String string : strings) {
+            var result = verifier.isPalindrome(string);
+            assertThat(result)
+                    .as("isPalindrome(\"%s\")", string)
+                    .isFalse();
         }
     }
 
