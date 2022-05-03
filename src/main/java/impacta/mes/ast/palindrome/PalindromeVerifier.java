@@ -1,8 +1,5 @@
 package impacta.mes.ast.palindrome;
 
-import static impacta.mes.ast.palindrome.StringEditor.removeAccents;
-import static impacta.mes.ast.palindrome.StringEditor.removePunctuationAndSpaces;
-
 public class PalindromeVerifier {
 
     public boolean isPalindrome(String string) {
@@ -13,7 +10,11 @@ public class PalindromeVerifier {
     }
 
     private boolean verify(String string) {
-        String normalizedString  = removeAccents(removePunctuationAndSpaces(string));
+        String normalizedString  = new StringEditor(string)
+                .removePunctuationAndSpaces()
+                .removeAccents()
+                .getResult();
+
         return new StringBuilder(normalizedString)
                 .reverse()
                 .toString()

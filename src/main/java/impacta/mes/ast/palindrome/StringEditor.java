@@ -4,15 +4,26 @@ import java.text.Normalizer;
 
 public class StringEditor {
 
-    public static String removePunctuationAndSpaces(String string) {
-        return string
+    private String string;
+
+    public StringEditor(String string) {
+        this.string = string;
+    }
+
+    public StringEditor removePunctuationAndSpaces() {
+        string = string
                 .replaceAll("\\p{Punct}", "")
                 .replaceAll("\\s+", "");
+        return this;
     }
 
-    public static String removeAccents(String string) {
+    public StringEditor removeAccents() {
         var normalized = Normalizer.normalize(string, Normalizer.Form.NFD);
-        return normalized.replaceAll("\\p{InCombiningDiacriticalMarks}", "");
+        string = normalized.replaceAll("\\p{InCombiningDiacriticalMarks}", "");
+        return this;
     }
 
+    public String getResult() {
+        return string;
+    }
 }

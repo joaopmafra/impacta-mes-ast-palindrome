@@ -8,13 +8,17 @@ public class StringEditorTest {
 
     @Test
     public void removePunctuationAndSpaces_stringWithPunctuationSpacesNumbersAndLetters_removesOnlyTheCorrectChars() {
-        var result = StringEditor.removePunctuationAndSpaces("a/1. c");
+        var result = new StringEditor("a/1. c")
+                .removePunctuationAndSpaces()
+                .getResult();
         assertThat(result).isEqualTo("a1c");
     }
 
     @Test
     public void removeAccents_stringWithAccents_changesTheCorrectChars() {
-        var result = StringEditor.removeAccents("aêío");
+        var result = new StringEditor("aêío")
+                .removeAccents()
+                .getResult();
         assertThat(result).isEqualTo("aeio");
     }
 
