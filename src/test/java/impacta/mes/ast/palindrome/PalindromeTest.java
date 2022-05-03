@@ -13,19 +13,19 @@ public class PalindromeTest {
 
     @Test
     public void isPalindrome_nullString_isFalse() {
-        boolean result = new PalindromeVerifier().isPalindrome(null);
+        var result = new PalindromeVerifier().isPalindrome(null);
         Assertions.assertThat(result).isFalse();
     }
 
     @Test
     public void isPalindrome_emptyString_isTrue() {
-        boolean result = new PalindromeVerifier().isPalindrome("");
+        var result = new PalindromeVerifier().isPalindrome("");
         Assertions.assertThat(result).isTrue();
     }
 
     @Test
     public void isPalindrome_oneCharString_isTrue() {
-        boolean result = new PalindromeVerifier().isPalindrome("1");
+        var result = new PalindromeVerifier().isPalindrome("1");
         Assertions.assertThat(result).isTrue();
     }
 
