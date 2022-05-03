@@ -32,4 +32,10 @@ public class PalindromeTest {
         assertThat(result).isTrue();
     }
 
+    @Test
+    public void isPalindrome_equalCharsString_isTrue() {
+        var result = verifier.isPalindrome("11");
+        assertThat(result).isTrue();
+    }
+
 }
