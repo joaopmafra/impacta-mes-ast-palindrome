@@ -10,15 +10,16 @@ public class PalindromeVerifier {
     }
 
     private boolean verify(String string) {
-        String normalizedString  = new StringEditor(string)
+        String normalized  = new StringEditor(string)
                 .removeAccents()
                 .removeNonAlphaNumericChars()
                 .getResult();
 
-        return new StringBuilder(normalizedString)
+        String reversed = new StringBuilder(normalized)
                 .reverse()
-                .toString()
-                .equalsIgnoreCase(normalizedString);
+                .toString();
+
+        return reversed.equalsIgnoreCase(normalized);
     }
 
 }
