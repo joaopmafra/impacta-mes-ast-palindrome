@@ -2,6 +2,7 @@ package impacta.mes.ast.palindrome;
 
 import java.util.Locale;
 
+import static impacta.mes.ast.palindrome.StringUtil.removeAccents;
 import static impacta.mes.ast.palindrome.StringUtil.removePunctuationAndSpaces;
 
 public class PalindromeVerifier {
@@ -14,7 +15,7 @@ public class PalindromeVerifier {
     }
 
     private boolean verify(String string) {
-        String normalizedString  = removePunctuationAndSpaces(string);
+        String normalizedString  = removeAccents(removePunctuationAndSpaces(string));
         return new StringBuilder(normalizedString)
                 .reverse()
                 .toString()
